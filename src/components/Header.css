@@ -1,0 +1,8 @@
+.bg-image {
+    background-image: url('fondo_rick_and_morty_1.jpg');
+    background-size: 1400px;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.6);
+}
