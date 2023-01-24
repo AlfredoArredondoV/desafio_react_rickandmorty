@@ -5,8 +5,8 @@ const Footer = (props) => {
         <div className="bg-light text-center text-lg-start">
             <div className="text-center p-3">
                 © 2023 Copyright: &nbsp;
-                <a classNAme="text-dark" href="https://misitio.cl/">{props.titulo}</a>
-            </div>        
+                <a classNAme="text-dark" href="https://misitio.cl/">{props.title}</a>
+            </div>
         </div>
     )
 }

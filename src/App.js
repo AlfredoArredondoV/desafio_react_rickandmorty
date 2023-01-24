@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import './App.css';
 
 const App = () => {
-
   const [characters, setCharacters] = useState([]);
   const [search, setSearch] = useState('');
 
@@ -14,31 +13,27 @@ const App = () => {
     setCharacters(data.results);
   }
 
-useEffect(() => {
-  getData();
-},[])
+  useEffect(() => { getData(); },[])
 
   return (
     <div className="container">
-      <Header titulo="Busqueda de Personajes de" subtitulo="Rick and Morty"/>
+      <Header title="Busqueda de Personajes de" subtitle="Rick and Morty"/>
       <div className="input-group mb-3">
         <span className="input-group-text" id="inputGroup-sizing-default">Ingrese nombre a buscar</span>
         <input 
         type="text" 
         className="form-control" 
-        aria-describedby="inputGroup-sizing-default"
         placeholder='buscar...' 
-        onChange={(e) => setSearch(e.target.value)}
-        value={search}
+        onChange={(e) => setSearch(e.target.value)} 
+        value={search} 
       />
       </div>
-
       <p>{search}</p>
       <div className='list'>
-        {characters
-        .filter((x) => x.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
-        .map((item) => (
-          <div className="card m-3" key={item.id}>
+        {characters 
+        .filter((x) => x.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())) 
+        .map((item) => ( 
+          <div className="card m-3" key={item.id}> 
             <img src={item.image} className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">{item.name}</h5>
@@ -48,7 +43,7 @@ useEffect(() => {
         )
         )}
       </div>
-      <Footer titulo="misitio.cl"/>
+      <Footer title="misitio.cl"/>
     </div>
     
   );

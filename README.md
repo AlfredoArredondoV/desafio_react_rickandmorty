@@ -1,4 +1,4 @@
 # Desafio React 04
 
-url :
-url video :
+- [mi video] : https://dancing-sunburst-4905cc.netlify.app/
+- [deploy preview] :
