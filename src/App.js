@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import './App.css';
 
 const App = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState([]); // variable de estado
   const [search, setSearch] = useState('');
 
   const getData = async () => {
@@ -13,7 +13,7 @@ const App = () => {
     setCharacters(data.results);
   }
 
-  useEffect(() => { getData(); },[])
+  useEffect(() => { getData(); },[]) // se ejecuta despues de renderizar la pagina
 
   return (
     <div className="container">
@@ -31,7 +31,7 @@ const App = () => {
       <p>{search}</p>
       <div className='list'>
         {characters 
-        .filter((x) => x.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())) 
+        .filter((x) => x.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())) // toLocaleLowerCase para dejar variable en minuscula
         .map((item) => ( 
           <div className="card m-3" key={item.id}> 
             <img src={item.image} className="card-img-top" alt="..."/>
